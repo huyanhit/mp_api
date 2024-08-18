@@ -123,9 +123,9 @@ class ModuleServiceProvider extends ServiceProvider{
 
     protected function mergerConfig(string $module): void
     {
-        $path = $this->module_path($module . DIRECTORY_SEPARATOR . 'Config/constants.php');
+        $path = $this->module_path($module . DIRECTORY_SEPARATOR . 'config/constants.php');
         if(file_exists($path)){
-            $this->mergeConfigFrom($path,'constants');
+            $this->mergeConfigFrom($path, 'constants');
         }
     }
 
